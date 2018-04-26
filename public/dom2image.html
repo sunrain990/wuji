@@ -1,0 +1,273 @@
+
+<!DOCTYPE html><html class=''>
+<head><script src='//production-assets.codepen.io/assets/editor/live/console_runner-079c09a0e3b9ff743e39ee2d5637b9216b3545af0de366d4b9aad9dc87e26bfd.js'></script>
+    <script src='//production-assets.codepen.io/assets/editor/live/events_runner-73716630c22bbc8cff4bd0f07b135f00a0bdc5d14629260c3ec49e5606f98fdd.js'></script>
+    <script src='//production-assets.codepen.io/assets/editor/live/css_live_reload_init-2c0dc5167d60a5af3ee189d570b1835129687ea2a61bee3513dee3a50c115a77.js'></script>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+    <link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" /><link rel="canonical" href="https://codepen.io/anon/pen/dZXKRe?editors=0010" />
+
+
+    <style class="cp-pen-styles">.save-button {
+        padding: 10px 20px;
+        margin: 10px 120px;
+    }
+    .img-show {
+        margin-top: 20px;
+    }
+    .inline-block {
+        display: inline-block;
+    }
+    .center-father-style-align {
+        display: flex;
+        align-items: center;
+    }
+    .company-card-info {
+        color: white;
+        width: 334px;
+        height: 166px;
+        border-radius: 5px;
+        padding: 0 20px;
+        background-image: url(https://img.alicdn.com/tfs/TB1tOvDXjuhSKJjSspjXXci8VXa-668-332.png);
+        background-repeat: no-repeat;
+    }
+    .company-name-short {
+        font-size: 20px;
+        margin-bottom: 4.5px;
+    }
+    .company-name-full {
+        font-size: 13px;
+        color: #fff;
+        opacity: 0.7;
+    }
+    .company-card-powerby-icon {
+        margin-top: 60px;
+        padding-bottom: 17.5px;
+    }
+    .powerby-icon svg {
+        width: 116px;
+        height: 12.5px;
+    }
+    .company-connection {
+        margin-top: 23.5px;
+    }
+    .company-phone {
+        margin-bottom: 2px;
+    }
+    .cover-grey {
+        background-color: grey;
+        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .button-inside {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        font-size: 18px;
+        left: 0;
+    }
+    .cover-button-ul {
+        border: 5px solid #fff;
+        border-radius: 5px;
+        margin: 0 20px;
+    }
+    .cover-button-ul li {
+        border-bottom: 1px solid #D1D1D1;
+    }
+    .no-border {
+        border: 0 !important;
+    }
+    .cover-button {
+        background-color: #fff;
+        color: #4A4A4A;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .cover-button-cancel {
+        border-radius: 5px;
+    }
+    .cover-button-cancel-a,
+    .cover-button-div {
+        margin: 15px 20px;
+    }
+    .cover-button-div {
+        background-color: #fff;
+        border-radius: 5px;
+        color: #4A4A4A;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+    .company-webmail-text,
+    .company-phone-text {
+        font-size: 11px;
+        color: #fff;
+        opacity: 0.4;
+    }
+    .company-phone-number,
+    .company-webmail-number {
+        font-size: 13px;
+    }
+    .no-phone-number-top {
+        padding-top: 20px;
+    }
+    .hint-tips {
+        line-height: 3;
+    }
+    </style></head><body>
+<div id='banner-page'></div>
+<script src='//production-assets.codepen.io/assets/common/stopExecutionOnTimeout-b2a7b3fe212eaa732349046d8416e00a9dec26eb7fd347590fbced3ab38af52e.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/react/15.6.1/react-dom.min.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.js'></script><script src='https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js'></script>
+<script >"use strict";
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+// 移动端H5页面截图【含 domtoimage、html2canvas 】
+// 博客地址：
+// http://blog.csdn.net/candy_home/article/details/78424642
+
+var FullPage = function (_React$Component) {
+    _inherits(FullPage, _React$Component);
+
+    function FullPage(props) {
+        _classCallCheck(this, FullPage);
+
+        var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
+
+        _this.state = {
+            isDownloadImg: false
+        };
+        return _this;
+    }
+
+    // 裁剪名片
+
+    FullPage.prototype.cropCard = function cropCard() {
+        console.log("裁剪名片");
+        var self = this;
+        // 获取dom结构
+        var card_target = this.refs.copyCardArea;
+        domtoimage.toPng(card_target).then(function (dataUrl) {
+            //andriod
+            if (dataUrl != "error") {
+                // alert("domtoimage");
+                self.setState({
+                    imgUrl: dataUrl,
+                    isDownloadImg: true
+                });
+            }
+            // ios
+            else {
+                (function () {
+                    var b64 = undefined;
+                    html2canvas(card_target, {
+                        useCORS: true
+                    }).then(function (canvas) {
+                        try {
+                            b64 = canvas.toDataURL("image/png");
+                        } catch (err) {
+                            console.log(err);
+                            // alert(err)
+                        }
+                        self.setState({
+                            imgUrl: b64,
+                            isDownloadImg: true
+                        });
+                    }).catch(function onRejected(error) {});
+                })();
+            }
+        });
+    };
+
+    FullPage.prototype.render = function render() {
+        var _this2 = this;
+
+        return React.createElement(
+            "div",
+            null,
+            React.createElement(
+                "button",
+                { className: "save-button", onClick: function onClick() {
+                    return _this2.cropCard();
+                } },
+                "点击保存名片"
+            ),
+            React.createElement(
+                "div",
+                { className: "company-card-info center-father-style-align", ref: "copyCardArea", id: "copyCardArea" },
+                React.createElement(
+                    "div",
+                    { id: "copyArea", className: "copyArea", ref: "copyArea" },
+                    React.createElement(
+                        "div",
+                        { className: "company-name-short" },
+                        "郁结"
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "company-name-full" },
+                        "Alibaba iDST"
+                    ),
+                    React.createElement(
+                        "div",
+                        { className: "company-connection" },
+                        React.createElement(
+                            "div",
+                            { className: "company-phone" },
+                            React.createElement(
+                                "div",
+                                { className: "inline-block company-phone-text" },
+                                "电话："
+                            ),
+                            React.createElement(
+                                "div",
+                                { className: "inline-block company-phone-number" },
+                                "*保密*"
+                            )
+                        ),
+                        React.createElement(
+                            "div",
+                            null,
+                            React.createElement(
+                                "div",
+                                { className: "inline-block company-webmail-text" },
+                                "邮箱："
+                            ),
+                            React.createElement(
+                                "div",
+                                { className: "inline-block company-webmail-number" },
+                                "15114584731@163.com"
+                            )
+                        )
+                    )
+                )
+            ),
+            React.createElement(
+                "h2",
+                null,
+                "下面是截图部分："
+            ),
+            React.createElement(
+                "div",
+                { className: "img-show", style: { display: this.state.isDownloadImg ? "block" : "none" } },
+                React.createElement("img", { src: this.state.imgUrl })
+            )
+        );
+    };
+
+    return FullPage;
+}(React.Component);
+
+ReactDOM.render(React.createElement(FullPage, null), document.getElementById("banner-page"));
+//# sourceURL=pen.js
+</script><script src="//production-assets.codepen.io/assets/editor/live/check-c263eb37bf3a3d49b8311c096168b478f5750c61a1166ea2cc660498870d671f.js"></script>
+</body></html>

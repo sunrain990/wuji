@@ -1,0 +1,69 @@
+
+@font-face {
+    font-family: 'fangzhengqingkebenyue';
+    src: url('../fonts/fangzhengqingkebenyue.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hangyiheilizhi';
+    src: url('../fonts/hangyiheilizhi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanyichengmeizi';
+    src: url('../fonts/hanyichengmeizi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hanyihanshi';
+    src: url('../fonts/hanyihanshi.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'heiti';
+    src: url('../fonts/heiti.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'hengshanmaoxing';
+    src: url('../fonts/hengshanmaoxing.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'huawenkaiti';
+    src: url('../fonts/huawenkaiti.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'siyuansongti';
+    src: url('../fonts/siyuansongti.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'xindixiawucha';
+    src: url('../fonts/xindixiawucha.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.spinner:before {
+    content: '\f110';
+    font-family: FontAwesome;
+}
+
+

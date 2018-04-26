@@ -1,0 +1,1172 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1">
+    <title>Your Signature</title>
+
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <script src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <!--script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.svg.min.js"></script-->
+
+    <link rel="stylesheet" href="assets/css/amazeui.min.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <style>
+        .bottom {
+            /*padding: 2rem auto;*/
+            margin: 2rem auto;
+        }
+
+        .bottom-left {
+            padding-right: 0;
+            width: 76%;
+        }
+
+        .bottom-right {
+            width: 24%;
+            margin: 0;
+            padding: 0;
+            border-left: 1px solid #cccccc;
+        }
+
+        .bottom-right img {
+            margin-left: 10%;
+        }
+
+        .qr-info {
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .sign {
+            padding: 0;
+            padding-right: 0;
+        }
+
+        .sign1 {
+            margin: 1.6rem auto 0.5rem;
+        }
+
+        .name {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        .gender {
+            font-size: 0.8rem;
+            color: #cfcfcf;
+        }
+
+        .brief {
+            font-size: 0.8rem;
+            color: #cfcfcf;
+        }
+
+        .city {
+            font-size: 0.8rem;
+            font-weight: 400;
+            color: #000000;
+        }
+
+        .zodiac {
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+
+        .character {
+            font-size: 0.8rem;
+        }
+
+        .qq {
+            font-weight: 500;
+        }
+
+        .qq-num {
+            /*letter-spacing:0.1rem;*/
+        }
+
+        .img-box {
+            position: relative;
+        }
+
+        .signature {
+            z-index: 10000;
+        }
+
+        .line {
+
+        }
+
+        .participate {
+            position: absolute;
+            top: 2rem;
+            left: 1.5rem;
+            color: #ffffff;
+            z-index: 10000;
+        }
+
+        .mainbody {
+            max-width: 750px;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .shadow {
+            width: 100%;
+            height: 100%;
+            z-index: 100;
+            color: #ffffff;
+            background: rgba(0, 0, 0, 0.5);
+            position: absolute;
+        }
+
+        .shadow .load {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -6rem;
+            margin-top: -2rem;
+            z-index: 101;
+        }
+    </style>
+
+</head>
+<body id="bodya">
+<div class="shadow">
+    <div class="load">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loading<i class="am-icon-spinner am-icon-spin"></i>
+        <div>
+            （加载完成后转发）
+        </div>
+    </div>
+</div>
+<div class="mainbody">
+    <div class="img-box">
+        <div class="participate">
+            参与人数：
+            <span class="part-num">1111</span>
+        </div>
+        <div class="signature">
+            <span class="content"></span>
+        </div>
+        <img src="" class="am-img-responsive bg-img" alt=""/>
+    </div>
+
+    <div class="am-g bottom">
+        <div class="am-u-sm-9 bottom-left">
+            <div class="am-u-sm-12 sign">
+                <img class="am-circle head-img" src="" width="30" height="30"/>
+                <span class="name">
+                熊歪歪
+            </span>
+                <span class="gender">
+                男
+            </span>
+                <span class="brief">
+                我在
+              <span class="city">
+                苏州</span>！你在哪里
+            </span>
+            </div>
+
+            <div class="am-u-sm-12 sign sign1">
+            <span class="zodiac">
+                懒人座
+            </span>
+
+                <span class="character">
+                重视物质
+            </span>
+            </div>
+
+            <div class="am-u-sm-12 sign sign2">
+            <span class="lianxifangshi">
+                联系方式：
+            </span>
+                <span class="num">
+                15056562523
+            </span>
+            </div>
+        </div>
+
+        <div class="am-u-sm-3 bottom-right">
+            <img src="assets/images/qr.png" width="80%" height="auto">
+            <div class="qr-info">
+                长按扫描
+            </div>
+            <div class="qr-info">
+                生成个性名片
+            </div>
+        </div>
+    </div>
+</div>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script src="assets/js/dom-to-image.min.js"></script>
+<script src="../js/common.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+
+<script src="assets/js/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script src="assets/js/amazeui.min.js"></script>
+
+<script>
+    $(function () {
+
+        //        var dataa = {
+//            "code": "1",
+//            "sentence": [
+//                "上帝为你关上一道门的同时，",
+//                "还会顺带夹你的脑子。",
+//                ""
+//            ],
+//            "type_style": "a",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_02.png",
+//            "constellation_detail": {
+//                "name": "傲娇座",
+//                "label": "作、作、作！"
+//            },
+//            "number": "651654"
+//        };
+//        datab = {
+//            "code": "1",
+//            "sentence": [
+//                "往北的地方海未眠。",
+//                "往南的地方花未开。",
+//                ""
+//            ],
+//            "type_style": "b",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_08.png",
+//            "constellation_detail": {
+//                "name": "吃货座",
+//                "label": "可吃可不吃？吃！"
+//            },
+//            "number": "14122"
+//        }
+//        datac = {
+//            "code": "1",
+//            "sentence": [
+//                "我不爱你了，",
+//                "我不要你了。",
+//                "—《异度空间》"
+//            ],
+//            "type_style": "c",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_06.png",
+//            "constellation_detail": {
+//                "name": "中二座",
+//                "label": "全世界都不了解我！"
+//            },
+//            "number": "0.168"
+//        }
+//        datad = {
+//            "code": "1",
+//            "sentence": [
+//                "想用一瞬间的快乐取代一生的痛苦吗？",
+//                "——剑网三"
+//            ],
+//            "type_style": "d",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_05.png",
+//            "constellation_detail": {
+//                "name": "女神座",
+//                "label": "容貌漂亮、智慧、优雅！"
+//            },
+//            "number": "15666546"
+//        }
+//        datae = {
+//            "code": "1",
+//            "sentence": [
+//                "相思树底说相思，",
+//                "思郎恨郎郎不知。",
+//                ""
+//            ],
+//            "type_style": "e",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_03.png",
+//            "constellation_detail": {
+//                "name": "女神座",
+//                "label": "容貌漂亮、智慧、优雅！"
+//            },
+//            "number": "38324"
+//        }
+//        dataf = {
+//            "code": "1",
+//            "sentence": [
+//                "为名忙，",
+//                "为利忙，",
+//                "忙里偷闲，",
+//                "喝杯茶去。",
+//                "——剑网三"
+//            ],
+//            "type_style": "f",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_03.png",
+//            "constellation_detail": {
+//                "name": "男神座",
+//                "label": "可望而不可及的男人"
+//            },
+//            "number": "31316511"
+//        }
+//        datag ={
+//            "code": "1",
+//            "sentence": [
+//                "情侣间最矛盾的地方就是幻想彼此的未来，",
+//                "却惦记着对方的过去。",
+//                ""
+//            ],
+//            "type_style": "g",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_04.png",
+//            "constellation_detail": {
+//                "name": "中二座",
+//                "label": "全世界都不了解我！"
+//            },
+//            "number": "15666546"
+//        }
+//        datah = {
+//            "code": "1",
+//            "sentence": [
+//                "人与人的缘分总是长长短短，",
+//                "像削铅笔。",
+//                "越是适切，",
+//                "消耗越是大。",
+//                "—《哀眠》"
+//            ],
+//            "type_style": "h",
+//            "picUrl": "http://szboxun.net/uploads/activit_cards/cat/04_03.png",
+//            "constellation_detail": {
+//                "name": "霸道总裁座",
+//                "label": "霸气，多金，强势！"
+//            },
+//            "number": "999999999"
+//        }
+
+        var height = $('body').height();
+
+        $('.bottom').css({
+            marginTop: (height - $('.img-box').height()) / 4
+        })
+
+        // 01
+//        var signature = $('.signature');
+//        var $content = $('.content');
+////        signature.append($content);
+//        var content = '';
+//        for(var i =0 ;i<dataa.sentence.length; i++) {
+//            content += '<span class="line am-u-lg-12">' + dataa.sentence[i] + '</span>';
+//        };
+//        $content.append(content);
+//        $content.find('.line').css({
+//            color: '#ffffff',
+//            fontSize: '2rem',
+//            fontWeight: '600',
+//            fontFamily: 'huawenkaiti'
+//        });
+//
+//        signature.css({
+//            position: 'absolute',
+//            bottom: '4rem',
+//            textAlign: 'center',
+//            marginLeft: '-' + $content.width()/2 + 'px'
+//        })
+
+        // 02
+//        var signature = $('.signature');
+//        var $content = $('.content');
+////        signature.append($content);
+//        var content = '';
+//        for(var i =0 ;i<datab.sentence.length; i++) {
+//            content += '<div class="line am-u-sm-2">' + datab.sentence[i] + '</div>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#000000',
+//            fontSize: '2rem',
+//            fontWeight: '500',
+//            fontFamily: 'hanyihanshi'
+//        });
+//        console.log(lines.length)
+//        for(var i =0;i<lines.length; i++) {
+//            lines.eq(i).css({
+//                top: (lines.length -2-i)*2 + 'rem'
+//            })
+//        }
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '4rem',
+//            left: '2rem'
+//        })
+
+
+        // 03
+//        var signature = $('.signature');
+//        var $content = $('.content');
+//        var content = '';
+//        for(var i =0 ;i<datac.sentence.length; i++) {
+//            content += '<span class="line">' + datac.sentence[i] + '</span>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#000000',
+//            fontSize: '2rem',
+//            fontWeight: '600',
+//            fontFamily: 'fangzhengqingkebenyue'
+//        });
+//
+//        lines.eq(lines.length-1).css({
+//            display: 'block',
+//            float: 'right'
+//        })
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '8rem',
+//            left: '2rem'
+//        })
+
+        // 04
+//        var signature = $('.signature');
+//        var $content = $('.content');
+//        var content = '';
+//        for(var i =0 ;i<datad.sentence.length; i++) {
+//            content += '<div class="line am-u-sm-12">' + datad.sentence[i] + '</div>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '1.6rem',
+//            fontWeight: '600',
+//            fontFamily: 'heiti'
+//        });
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '8rem',
+//            left: '2rem'
+//        })
+
+        // 05
+//        var signature = $('.signature');
+//        var $content = $('.content');
+//        $content.addClass('am-u-sm-8');
+//        var content = '';
+//        for(var i =0 ;i<datae.sentence.length; i++) {
+//            content += '<span class="line">' + datae.sentence[i] + '</span>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#000000',
+//            fontSize: '2rem',
+//            fontWeight: '500',
+//            fontFamily: 'hangyiheilizhi'
+//        });
+//
+//        signature.css({
+//            position: 'absolute',
+//            bottom: '1rem'
+//        })
+
+        // 06
+//        var signature = $('.signature');
+//        var $content = $('.content');
+//        var content = '';
+//        for(var i =0 ;i<dataf.sentence.length; i++) {
+//            content += '<span class="line">' + dataf.sentence[i] + '</span>';
+//        };
+//        $content.css({
+//            display: 'block',
+//            padding: '20px'
+//        })
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '1.6rem',
+//            fontWeight: '500',
+//            fontFamily: 'hanyichengmeizi'
+//        });
+//
+//        lines.eq(lines.length-1).css({
+//            display: 'block',
+//            float: 'right'
+//        })
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '8rem'
+//        })
+
+
+        // 07
+//        var signature = $('.signature');
+//        var $content = $('.content');
+////        signature.append($content);
+//        var content = '';
+//        for(var i =0 ;i<datag.sentence.length; i++) {
+//            content += '<div class="line am-u-sm-1 am-align-right">' + datag.sentence[i] + '</div>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '1.4rem',
+//            fontWeight: '500',
+//            fontFamily: 'hengshanmaoxing',
+//            padding: 0,
+//            margin: 0
+//        });
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '2rem',
+//            right: 0
+//        })
+
+
+        // 08
+//        var signature = $('.signature');
+//        var $content = $('.content');
+////        signature.append($content);
+//        var content = '';
+//        for(var i =0 ;i<datah.sentence.length; i++) {
+//            content += '<div class="line am-u-sm-10 am-u-sm-centered">' + datah.sentence[i] + '</div>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '1.4rem',
+//            fontWeight: '500',
+//            fontFamily: 'huawenkaiti'
+//        });
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '8rem',
+//        })
+
+        // 09
+//        var signature = $('.signature');
+//        var $content = $('.content');
+//        var content = '';
+//        for(var i =0 ;i<datah.sentence.length; i++) {
+//            content += '<div class="line am-u-sm-12">' + datah.sentence[i] + '</div>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '2rem',
+//            fontWeight: '500',
+//            fontFamily: 'siyuansongti',
+//            textAlign: 'center'
+//        });
+//
+//        lines.eq(lines.length-1).css({
+//            fontSize: '1rem'
+//        })
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '8rem',
+//        })
+
+        // 10
+//        var signature = $('.signature');
+//        var $content = $('.content');
+//        var content = '';
+//        for(var i =0 ;i<datah.sentence.length; i++) {
+//            content += '<span class="line">' + datah.sentence[i] + '</span>';
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '1rem',
+//            fontWeight: '500',
+//            fontFamily: 'xindixiawucha',
+//            textAlign: 'center'
+//        });
+//
+//        lines.eq(lines.length-1).css({
+//            fontSize: '1rem'
+//        })
+//
+//        signature.css({
+//            width: '16rem',
+//            height: '16rem',
+//            backgroundColor: 'rgba(255,255,0,0.5)',
+//            position: 'absolute',
+//            top: '8rem',
+//            left: '50%',
+//            marginLeft: '-8rem',
+//            borderRadius: '50%'
+//        })
+// var signature = $('.signature');
+//        var $content = $('.content');
+////        signature.append($content);
+//        var content = '';
+//        var len = 0;
+//        var dataitem = datag.sentence
+//        for(var i =0 ;i<dataitem.length; i++) {
+//            content += '<div class="line">' + dataitem[i] + '</div>';
+//            if(dataitem[i]) {
+//                len++;
+//            }
+//        };
+//        $content.append(content);
+//
+//        var lines = $content.find('.line');
+//        lines.css({
+//            color: '#ffffff',
+//            fontSize: '1.6rem',
+//            fontWeight: '500',
+//            width: '2rem',
+//            fontFamily: 'fangzhengqingkebenyue',
+//            padding: 0,
+//            margin: 0,
+//            float: 'right'
+//        });
+//
+//
+//        signature.css({
+//            position: 'absolute',
+//            top: '4rem',
+//            left: '50%',
+//            marginLeft: '-' + len *2 + 'rem'
+//        })
+
+        function setUrlVals(obj) {
+            var str = ''
+            for (var i in obj) {
+                str += ('&' + i + '=' + obj[i])
+            }
+            return '?' + str.substring(1)
+        }
+
+        function getUrlVals(url) {
+            if (!url) url = window.location.href;
+            var paras = {};
+            var strarr = url.split("?");
+            var parr = [];
+            if (strarr.length > 1) {
+                parr = strarr[1].split("&");
+            }
+            parr.forEach(function (v, i) {
+                var ar = v.split("=");
+                if (ar.length > 1) {
+                    paras[ar[0]] = decodeURIComponent(ar[1]);
+                }
+            });
+            return paras;
+        }
+
+        var person = getUrlVals();
+        //var innerbody = $('.innerbody').clone();
+
+        //$('#bodya').html('').append(innerbody);
+        $.ajax({
+            url: "http://szboxun.net/Activity/selectActivityCard",
+            type: "POST",
+            data: {time: person.shengri, number: person.contact},
+            success: function (data) {
+                if (data.code == 1) {
+                    $('.name').html(person.name);
+                    $('.city').html(person.city);
+                    $('.zodiac').html(data.constellation_detail.name);
+                    $('.character').html(data.constellation_detail.label);
+                    $('.part-num').html(data.participants_count);
+                    $('.num').html(data.number);
+                    $('.bg-img').attr('src', data.picUrl);
+                    $('.head-img').attr('src', person.headimgurl ? person.headimgurl : data.picUrl);
+
+                    var dt = data.sentence;
+
+                    if (data.type_style == 'a') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<span class="line am-u-lg-12">' + dt[i] + '</span>';
+                        }
+                        ;
+                        $content.append(content);
+                        $content.find('.line').css({
+                            color: '#ffffff',
+                            fontSize: '2rem',
+                            fontWeight: '600',
+                            fontFamily: 'huawenkaiti'
+                        });
+
+                        signature.css({
+                            position: 'absolute',
+                            bottom: '4rem',
+                            textAlign: 'center',
+                            marginLeft: '-' + $content.width() / 2 + 'px'
+                        })
+                    } else if (data.type_style == 'b') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<div class="line am-u-sm-2">' + dt[i] + '</div>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#000000',
+                            fontSize: '2rem',
+                            fontWeight: '500',
+                            fontFamily: 'hanyihanshi'
+                        });
+                        console.log(lines.length)
+                        for (var i = 0; i < lines.length; i++) {
+                            lines.eq(i).css({
+                                top: (lines.length - 2 - i) * 2 + 'rem'
+                            })
+                        }
+                    } else if (data.type_style == 'c') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<span class="line">' + dt[i] + '</span>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '2rem',
+                            fontWeight: '600',
+                            fontFamily: 'fangzhengqingkebenyue'
+                        });
+
+                        lines.eq(lines.length - 1).css({
+                            display: 'block',
+                            float: 'right'
+                        })
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '8rem',
+                            left: '2rem'
+                        })
+                    } else if (data.type_style == 'd') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<div class="line am-u-sm-12">' + dt[i] + '</div>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '1.6rem',
+                            fontWeight: '600',
+                            fontFamily: 'heiti'
+                        });
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '8rem',
+                            left: '2rem'
+                        })
+                    } else if (data.type_style == 'e') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        $content.addClass('am-u-sm-8');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<span class="line">' + dt[i] + '</span>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '2rem',
+                            fontWeight: '500',
+                            fontFamily: 'hangyiheilizhi'
+                        });
+
+                        signature.css({
+                            position: 'absolute',
+                            bottom: '1rem'
+                        })
+                    } else if (data.type_style == 'f') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<span class="line">' + dt[i] + '</span>';
+                        }
+                        ;
+                        $content.css({
+                            display: 'block',
+                            padding: '20px'
+                        })
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '1.6rem',
+                            fontWeight: '500',
+                            fontFamily: 'hanyichengmeizi'
+                        });
+
+                        lines.eq(lines.length - 1).css({
+                            display: 'block',
+                            float: 'right'
+                        })
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '8rem'
+                        })
+                    } else if (data.type_style == 'g') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        //        signature.append($content);
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<div class="line am-u-sm-1 am-align-right">' + dt[i] + '</div>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '1.4rem',
+                            fontWeight: '500',
+                            fontFamily: 'hengshanmaoxing',
+                            padding: 0,
+                            margin: 0
+                        });
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '2rem',
+                            right: 0
+                        })
+                    } else if (data.type_style == 'h') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        //        signature.append($content);
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<div class="line am-u-sm-10 am-u-sm-centered">' + dt[i] + '</div>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '1.4rem',
+                            fontWeight: '500',
+                            fontFamily: 'huawenkaiti'
+                        });
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '8rem',
+                        })
+                    } else if (data.type_style == 'i') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<div class="line am-u-sm-12">' + dt[i] + '</div>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '2rem',
+                            fontWeight: '500',
+                            fontFamily: 'siyuansongti',
+                            textAlign: 'center'
+                        });
+
+                        lines.eq(lines.length - 1).css({
+                            fontSize: '1rem'
+                        })
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '8rem',
+                        })
+                    } else if (data.type_style == 'j') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        var content = '';
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<span class="line">' + dt[i] + '</span>';
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '1rem',
+                            fontWeight: '500',
+                            fontFamily: 'xindixiawucha',
+                            textAlign: 'center'
+                        });
+
+                        lines.eq(lines.length - 1).css({
+                            fontSize: '1rem'
+                        })
+
+                        signature.css({
+                            width: '16rem',
+                            height: '16rem',
+                            backgroundColor: 'rgba(255,255,0,0.5)',
+                            position: 'absolute',
+                            top: '8rem',
+                            left: '50%',
+                            marginLeft: '-8rem',
+                            borderRadius: '50%'
+                        })
+                    } else if (data.type_style == 'k') {
+                        var signature = $('.signature');
+                        var $content = $('.content');
+                        //        signature.append($content);
+                        var content = '';
+                        var len = 0;
+                        for (var i = 0; i < dt.length; i++) {
+                            content += '<div class="line">' + dt[i] + '</div>';
+                            if (dt[i]) {
+                                len++;
+                            }
+                        }
+                        ;
+                        $content.append(content);
+
+                        var lines = $content.find('.line');
+                        lines.css({
+                            color: '#ffffff',
+                            fontSize: '1.6rem',
+                            fontWeight: '500',
+                            width: '2rem',
+                            fontFamily: 'fangzhengqingkebenyue',
+                            padding: 0,
+                            margin: 0,
+                            float: 'right'
+                        });
+
+
+                        signature.css({
+                            position: 'absolute',
+                            top: '4rem',
+                            left: '50%',
+                            marginLeft: '-' + len * 2 + 'rem'
+                        })
+                    }
+                } else {
+                    alert('服务器繁忙，请刷新！');
+                    window.location.href = window.location.href + "&uuid=" + 10000 * Math.random();
+                }
+
+                setTimeout(function () {
+
+                    $('.shadow').remove();
+
+
+                    var width = $('#bodya').width(); //这是我们准备画的div
+                    var height = $('#bodya').height();
+
+                    //要将 canvas 的宽高设置成容器宽高的 2 倍
+                    var canvas = document.createElement("canvas");
+                    canvas.width = width * 3;
+                    canvas.height = height * 3;
+                    canvas.style.width = width + "px";
+                    canvas.style.height = height + "px";
+                    var context = canvas.getContext("2d");
+                    //然后将画布缩放，将图像放大两倍画到画布上
+                    context.scale(2, 2);
+                    html2canvas(document.getElementById('bodya'), {
+                        //allowTaint: true,
+                        //taintTest: false,
+                        //background: '#ffffff',
+                        onrendered: function (canvas) {
+
+                            //生成base64图片数据
+                            dataUrl = canvas.toDataURL("image/jpg");
+                            var image = document.createElement("img");
+                            //将img节点添加到body里面
+                            image.src = dataUrl;
+                            var htmlh = $('html').height();
+                            $('#bodya').html('').append(image);
+
+                            var htmlh = $('html').height();
+
+                            var bgshadow = $('<div class="bgshadow"></div>').css({
+                                width: '100%',
+                                height: htmlh,
+                                position: 'absolute',
+                                backgroundImage: "url('img/名片背景.png')",
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: '100% 100%',
+                                zIndex: '101'
+                            });
+
+                            var img = $(image).css({
+                                width: '80%',
+                                zIndex: 301,
+                                position: 'absolute',
+                                top: htmlh * 0.08,
+                                left: '10%'
+                            })
+
+                            var zhegai = $('<div class="zhegai"></div>').css({
+                                width: '100%',
+                                height: htmlh * 0.4,
+                                position: 'absolute',
+                                top: htmlh * 0.6,
+                                backgroundImage: "url('img/名片下方遮盖.png')",
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: '100% 100%',
+                                zIndex: '401'
+                            });
+
+
+                            $('#bodya').append(img).append(bgshadow).append(zhegai);
+
+                            var sharebtn = $('<button></button>').css({
+                                position: 'absolute',
+                                width: '60px',
+                                height: '82px',
+                                border: 'none',
+                                left: '20%',
+                                marginLeft: '-3rem',
+                                zIndex: '501',
+                                top: htmlh * 0.9 - 30,
+                                backgroundColor: 'Transparent',
+                                backgroundImage: "url('img/活动分享.png')",
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: '60px 82px',
+                            });
+
+                            var regenerate = $('<button id="generate"></button>').css({
+                                position: 'absolute',
+                                width: '60px',
+                                height: '82px',
+                                border: 'none',
+                                right: '11%',
+                                zIndex: '501',
+                                backgroundColor: 'Transparent',
+                                backgroundImage: "url('img/活动重新加载.png')",
+                                backgroundRepeat: 'no-repeat',
+                                backgroundSize: '100% 100%',
+                                top: htmlh * 0.9 - 30
+                            });
+                            regenerate.unbind('click');
+                            regenerate.click(function () {
+                                //window.location.reload();
+                                window.location.href = window.location.href + "&uuid=" + 10000 * Math.random();
+                            });
+                            sharebtn.unbind('click');
+                            sharebtn.click(function () {
+                                app.wxconfig(function (data) {
+                                    // alert('in app');;
+                                    wx.config({
+                                        debug: true,
+                                        appId: data.appId,
+                                        timestamp: data.timestamp,
+                                        nonceStr: data.nonceStr,
+                                        signature: data.signature,
+                                        jsApiList: ['onMenuShareTimeline']
+                                    });
+//处理成功验证
+                                    wx.ready(function () {
+                                        // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，
+                                        //config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。
+                                        //对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                                        //监听，分享到朋友圈
+                                        wx.onMenuShareTimeline({
+                                            title: '标题测试',
+                                            link: 'http://szboxun.net/app/activity/index.html',
+                                            imgUrl: 'http://szboxun.net/uploads/activit_cards/cat/04_03.png',
+                                            success: function () {
+                                                appendText('分享成功');
+                                            },
+                                            calcel: function () {
+                                                appendText('已经取消');
+                                            }
+                                        });
+                                    });
+                                })
+                            });
+                            $('#bodya').append(sharebtn).append(regenerate);
+                        }
+                    });
+
+
+                }, 8000)
+            },
+            error: function (data) {
+                // console.log('2',data)
+                alert('error');
+            },
+            //complete: function(dt) {
+
+
+            //}
+        });
+    })
+</script>
+</body>
+</html>
